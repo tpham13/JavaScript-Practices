@@ -5,3 +5,15 @@
  array. for instance, the numbers [1, 3,4] form a subsequence of the array [1, 2. 3. 4], 
  and so do the numbers [2, 4]. Note that a single number in an array and the array itself are both valid
  subsequences of the array*/
+
+//  solution 1: O(n) Time | O(1) Space
+ function isValidSubsequence(array, sequence) {
+     let arrayIndex = 0; 
+     let sequenceIndex = 0; 
+     while (arrayIndex < array.length && sequenceIndex < sequence.length) {
+         if(array[arrayIndex] === sequence[sequenceIndex]) 
+            sequenceIndex++;
+            arrayIndex++;
+     }
+    return sequenceIndex === sequence.length;
+ }
