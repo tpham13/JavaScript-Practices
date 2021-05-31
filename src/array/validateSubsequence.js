@@ -6,6 +6,11 @@
  and so do the numbers [2, 4]. Note that a single number in an array and the array itself are both valid
  subsequences of the array*/
 
+/* What is a subsequence? 
+a subsequence is a sequence that can be derived from another sequence 
+by deleting some or no elements without changing the order of the 
+remaining elements. */
+
 //  solution 1: O(n) Time | O(1) Space
  function isValidSubsequence(array, sequence) {
      let arrayIndex = 0; 
