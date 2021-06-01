@@ -1,0 +1,9 @@
+SLIDING WINDOW
+
+This pattern involves creating a WINDOW which can either be an array 
+or number from one position to another. 
+
+Depeending on a certain condition, the windown either increases or closes(and a new 
+window is created) 
+
+Very useful for keeping track of a subset of data in an array/string etc.
