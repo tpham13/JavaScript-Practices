@@ -33,3 +33,15 @@ class Solution {
         return returnValue        
     }
 }
+
+/* You are given a list of strings orders. Each element in orders starts with either "P" meaning pickup or "D" meaning delivery followed by the order id. For example, "P12" means pick up order 12.
+
+Return whether orders is valid given the following rules:
+
+A delivery cannot happen for an order before pickup
+Every pickup must be delivered
+An order that's already been picked up and delivered cannot be picked up or delivered again
+
+Constraints:
+
+0 ≤ n ≤ 100,000 where n is the length of orders */
