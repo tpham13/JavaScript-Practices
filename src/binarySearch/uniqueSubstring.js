@@ -1,3 +1,4 @@
+
 class Solution {
     solve(s) {
         let left = 0;
@@ -21,24 +22,19 @@ class Solution {
 
     }
 }
+/* Given a lowercase alphabet string s, 
+return the total number of substrings that contain one unique character.
 
-// another solution: calculateclass Solution {
-class Palindrome {
-    solve(s) {
-        let checkString = s.replace(/[^a-z]/g, '');
-        let i = 0;
-        let j = checkString.length - 1;
-        while (i <= j) {
-            if (checkString[i] === checkString[j]) {
-                i += 1;
-                j -= 1;
-            } else {
-                return false;
-            }
-        }
-        return true;
-    }
-}
+Constraints
+
+n ≤ 10,000 where n is the length of s.
+
+Example: 
+Input: s = "aab"
+output: 4
+
+*/
+
 
 // s ="aab"
 // output = 4
@@ -46,4 +42,4 @@ class Palindrome {
 // a => 1
 // aa => 3
 // aaa => 6
-// sliding window pattern
+// sliding window pattern 
