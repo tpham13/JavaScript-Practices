@@ -8,7 +8,7 @@ There can be negative numbers in the array, but it will always be sorted*/
 // 3. move i up by one if i !== j; j will automatically move forward because of the for loop
 // 4. if i == j, then set i = j 
 // 5. return i + 1 to get the total of unique values
-
+// O(n)-linear time b/c we only looping once
 function countUniqueValues(arr){
     // if nothing is in the array, then return 0
     if(arr.length === 0) return 0;
