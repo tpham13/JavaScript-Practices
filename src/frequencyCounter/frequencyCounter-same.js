@@ -49,6 +49,14 @@ function same(arr1, arr2) {
     let frequencyCounter2 = {}
     
     for(let value of arr1) {
+        /* 
+The idea is that if frequencyCounter1[val] is undefined it defaults to 0. 
+undefined + 1 returns NaN and it wouldn't work as the programmer intended, so he uses || to workaround that problem without having to write additional lines of code.
+
+In JavaScript the operator || doesn't return true or false as you would expect, 
+it returns either the first element that would evaluates as true if it was converted to boolean, or default to the last element if none is found.
+
+For example, (null || "" || undefined || false || NaN || "test" || 2) will return "test" */
         frequencyCounter1[value] = (frequencyCounter1[value] || 0) + 1
     }
     
