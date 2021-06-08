@@ -58,3 +58,8 @@ function areThereDuplicates(...arg) {
     }
     return false
   }
+
+  //solution 4: One linear solution
+  function areThereDuplicates() {
+    return new Set(arguments).size !== arguments.length;
+  }
