@@ -11,6 +11,7 @@ areThereDuplicates(1,2,2) //true
 areThereDuplicates('a', 'b', 'c', 'a') // true
 */
 
+//solution 1: Using Frequency Counter pattern
 function areThereDuplicates(...arg) {
     // good luck. (supply any arguments you deem necessary.)
   
