@@ -42,3 +42,35 @@ function trap(height){
     
     return sum
 }
+//----------------------------------------------------------------
+
+//solution 2: using pointer
+//space is O(n) because we store the leftWall
+function waterTrapper(height){
+    let leftWall = [0]; //0 is account for that number to the left of the first index that is not in the array
+    let rightWall = 0; //calculate in real time
+    let totalWater = 0;
+
+    //loop through the array to get the leftWall max height
+
+    for (let i = 1; i < height.length; i++){
+        //pushing at every iteration  the max last wall height that we see
+        leftWall.push(Math.max(leftWall[i-1], height[i-1]));
+//         console.log(`left: ${leftWall[i-1]}, height: ${height[i-1]}`)
+    }
+    //loop through the array to get the rightWall max height 
+    //start at the second to the last index of the array height
+    for (let j = height.length - 2; j >= 0; j--){
+        //get the max wall height to the right calculate with rightWall and the current height to the right
+        rightWall = Math.max(rightWall, height[j+1]);
+//         console.log(rightWall)
+        let sum = Math.min(rightWall, leftWall[j]) - height[j]
+        if (sum > 0) totalWater += sum; 
+    }
+
+
+    return totalWater;
+}
+
+waterTrapper([0,1,0,2,1,0,1,3,2,1,2,1])
+// waterTrapper([4,2,0,3,2,5])
